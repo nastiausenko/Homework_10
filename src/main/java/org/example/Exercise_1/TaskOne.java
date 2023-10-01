@@ -3,7 +3,6 @@ package org.example.Exercise_1;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-//import java.lang.reflect.Parameter;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
