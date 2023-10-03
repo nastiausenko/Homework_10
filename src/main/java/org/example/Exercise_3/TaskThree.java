@@ -3,9 +3,7 @@ package org.example.Exercise_3;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class TaskThree {
 
@@ -25,7 +23,15 @@ public class TaskThree {
                 }
             }
 
-            for (Map.Entry<String, Integer> entry: wordFrequency.entrySet()) {
+            List<Map.Entry<String, Integer>> wordList = new ArrayList<>(wordFrequency.entrySet());
+            wordList.sort(new Comparator<Map.Entry<String, Integer>>() {
+                @Override
+                public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                    return (o2.getValue().compareTo(o1.getValue()));
+                }
+            });
+
+            for (Map.Entry<String, Integer> entry: wordList) {
                 System.out.println(entry.getKey() + " " + entry.getValue());
             }
 
