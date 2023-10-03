@@ -21,12 +21,12 @@ public class TaskThree {
                 String[] words = line.split("\\s+");
 
                 for (String word: words) {
-                    wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
+                        wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
                 }
+            }
 
-                for (Map.Entry<String, Integer> entry: wordFrequency.entrySet()) {
-                    System.out.println(entry.getKey() + " " + entry.getValue());
-                }
+            for (Map.Entry<String, Integer> entry: wordFrequency.entrySet()) {
+                System.out.println(entry.getKey() + " " + entry.getValue());
             }
 
         } catch (IOException ex){
